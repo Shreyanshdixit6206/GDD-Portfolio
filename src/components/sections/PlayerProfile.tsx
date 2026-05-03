@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionWrapper, { itemVariants } from "../ui/SectionWrapper";
-import portrait from "@/../public/images/shreyansh-portrait.png";
+import portrait from "@/../public/Shrey.jpeg";
 
 const stats = [
   { label: "Design Thinking", value: 92 },
