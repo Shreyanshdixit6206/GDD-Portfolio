@@ -5,18 +5,18 @@ import SectionWrapper, { itemVariants } from "../ui/SectionWrapper";
 
 const nodes = {
   design: [
-    { id: "d1", label: "Visual & UI/UX", x: 80, y: 60 },
-    { id: "d2", label: "Game Sense", x: 80, y: 130 },
-    { id: "d3", label: "Systems Thinking", x: 80, y: 200 },
-    { id: "d4", label: "Player Psychology", x: 80, y: 270 },
-    { id: "d5", label: "Product Strategy", x: 80, y: 340 },
+    { id: "d1", label: "Visual & UI/UX", x: 140, y: 60 },
+    { id: "d2", label: "Game Sense", x: 140, y: 130 },
+    { id: "d3", label: "Systems Thinking", x: 140, y: 200 },
+    { id: "d4", label: "Player Psychology", x: 140, y: 270 },
+    { id: "d5", label: "Product Strategy", x: 140, y: 340 },
   ],
   build: [
-    { id: "b1", label: "Prototyping", x: 320, y: 60 },
-    { id: "b2", label: "AI Orchestration", x: 320, y: 130 },
-    { id: "b3", label: "Vibe Coding", x: 320, y: 200 },
-    { id: "b4", label: "Rapid Deployment", x: 320, y: 270 },
-    { id: "b5", label: "Execution & Delivery", x: 320, y: 340 },
+    { id: "b1", label: "Prototyping", x: 260, y: 60 },
+    { id: "b2", label: "AI Orchestration", x: 260, y: 130 },
+    { id: "b3", label: "Vibe Coding", x: 260, y: 200 },
+    { id: "b4", label: "Rapid Deployment", x: 260, y: 270 },
+    { id: "b5", label: "Execution & Delivery", x: 260, y: 340 },
   ],
   convergence: [
     { id: "c1", label: "Product & Game Designer", x: 200, y: 410 },
@@ -60,7 +60,7 @@ export default function ProgressionTree() {
         >
           {/* Branch labels */}
           <text
-            x="80"
+            x="140"
             y="30"
             textAnchor="middle"
             className="fill-[var(--color-accent)]"
@@ -69,7 +69,7 @@ export default function ProgressionTree() {
             DESIGN & SYSTEMS
           </text>
           <text
-            x="320"
+            x="260"
             y="30"
             textAnchor="middle"
             className="fill-[var(--color-accent)]"
@@ -114,7 +114,7 @@ export default function ProgressionTree() {
 
           {/* Convergence lines */}
           <motion.line
-            x1={80}
+            x1={140}
             y1={355}
             x2={200}
             y2={395}
@@ -126,7 +126,7 @@ export default function ProgressionTree() {
             viewport={{ once: true }}
           />
           <motion.line
-            x1={320}
+            x1={260}
             y1={355}
             x2={200}
             y2={395}
