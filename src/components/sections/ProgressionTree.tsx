@@ -163,8 +163,9 @@ export default function ProgressionTree() {
                 opacity="0.8"
               />
               <text
-                x={node.x + 22}
+                x={node.x - 22}
                 y={node.y + 4}
+                textAnchor="end"
                 className="fill-[var(--color-text)]"
                 style={{ fontSize: "11px", fontFamily: "var(--font-body)" }}
               >
@@ -198,9 +199,8 @@ export default function ProgressionTree() {
                 opacity="0.8"
               />
               <text
-                x={node.x - 22}
+                x={node.x + 22}
                 y={node.y + 4}
-                textAnchor="end"
                 className="fill-[var(--color-text)]"
                 style={{ fontSize: "11px", fontFamily: "var(--font-body)" }}
               >
