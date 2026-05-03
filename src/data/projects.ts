@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: "health-nexus",
     name: "Health Nexus",
-    tagline: "Generic medicine search + AI health platform",
+    tagline: "Research Project & Prototype — Generic medicine search + AI health platform",
     problem:
       "Patients in India overpay for branded drugs when affordable generic alternatives exist.",
     solution:
@@ -28,7 +28,7 @@ export const projects: Project[] = [
   {
     id: "findmyitem",
     name: "FindMyItem",
-    tagline: "Lost-and-found campus tracking system",
+    tagline: "Concept Prototype — Lost-and-found campus tracking system",
     problem:
       "University students lose items frequently with no centralized system to report or reclaim.",
     solution:
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     id: "crisper",
     name: "Crisper",
-    tagline: "Smart food waste reduction platform",
+    tagline: "UI Concept — Smart food waste reduction platform",
     problem:
       "Households waste 30% of purchased food due to poor tracking and planning.",
     solution:
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   {
     id: "subtract",
     name: "Subtract",
-    tagline: "Minimalist expense tracker",
+    tagline: "Personal Build — Minimalist expense tracker",
     problem:
       "Most finance apps are over-engineered — users need simple daily tracking, not enterprise accounting.",
     solution:

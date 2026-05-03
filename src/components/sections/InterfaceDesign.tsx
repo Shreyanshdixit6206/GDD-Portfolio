@@ -11,22 +11,10 @@ const designWork = [
     accent: "#4ECDC4",
   },
   {
-    title: "Mobile FTUE Flow",
-    description: "First-time user experience design for a health-tech app — conversational onboarding with progressive disclosure.",
-    tags: ["MOBILE", "ONBOARDING", "UX"],
-    accent: "#FFB347",
-  },
-  {
     title: "SPAWN POINT — Game UI",
     description: "Interface mockups for an idle RPG mobile game — skill allocation screen, quest board, and portfolio view.",
     tags: ["HUD", "GAME_UI", "PROTOTYPE"],
     accent: "#AB47BC",
-  },
-  {
-    title: "Campus Tracking System",
-    description: "FindMyItem interface — location-aware lost-and-found system with map integration and notification design.",
-    tags: ["MOBILE", "MAP_UI", "UX"],
-    accent: "#7CB342",
   },
 ];
 

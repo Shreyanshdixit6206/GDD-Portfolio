@@ -8,26 +8,26 @@ const contacts = [
   {
     icon: Mail,
     label: "Email",
-    value: "shreyanshdixit@email.com",
-    href: "mailto:shreyanshdixit@email.com",
+    value: "shreyanshdixit6206@gmail.com",
+    href: "mailto:shreyanshdixit6206@gmail.com",
   },
   {
     icon: Globe,
     label: "GitHub",
-    value: "github.com/shreyansh",
-    href: "https://github.com/shreyansh",
+    value: "github.com/Shreyanshdixit6206",
+    href: "https://github.com/Shreyanshdixit6206",
   },
   {
     icon: Link2,
     label: "LinkedIn",
-    value: "linkedin.com/in/shreyansh",
-    href: "https://linkedin.com/in/shreyansh",
+    value: "linkedin.com/in/shreyansh-dixit-a70717355",
+    href: "https://www.linkedin.com/in/shreyansh-dixit-a70717355",
   },
   {
     icon: FileText,
     label: "Resume",
     value: "Download PDF",
-    href: "#",
+    href: "https://drive.google.com/file/d/1QboM0PM15xVvklo6ee3AEQha9h-goaO7/view?usp=sharing",
   },
 ];
 

@@ -10,18 +10,14 @@ interface Mechanic {
 }
 
 const mechanics: Mechanic[] = [
-  { name: "Game Design Theory", proficiency: 5, category: "design" },
-  { name: "UX / Interaction Design", proficiency: 5, category: "design" },
-  { name: "Core Loop Architecture", proficiency: 4, category: "design" },
-  { name: "User Research & Testing", proficiency: 4, category: "design" },
-  { name: "Information Architecture", proficiency: 4, category: "design" },
-  { name: "Wireframing & Prototyping", proficiency: 5, category: "design" },
-  { name: "React / Next.js", proficiency: 4, category: "build" },
-  { name: "TypeScript", proficiency: 4, category: "build" },
-  { name: "Figma & Design Tools", proficiency: 5, category: "build" },
-  { name: "Tailwind CSS", proficiency: 4, category: "build" },
-  { name: "Python", proficiency: 3, category: "build" },
-  { name: "Three.js / WebGL", proficiency: 3, category: "build" },
+  { name: "System Thinking", proficiency: 5, category: "design" },
+  { name: "UI/UX Design", proficiency: 4, category: "design" },
+  { name: "Product Thinking", proficiency: 4, category: "design" },
+  { name: "Game Sense & Player Understanding", proficiency: 5, category: "design" },
+  { name: "Execution & Delivery", proficiency: 5, category: "build" },
+  { name: "Adaptability in Chaos", proficiency: 5, category: "build" },
+  { name: "Practical Communication", proficiency: 4, category: "build" },
+  { name: "Vibe Coding (AI Orchestration)", proficiency: 4, category: "build" },
 ];
 
 function ProficiencyDots({ level }: { level: number }) {
@@ -73,7 +69,7 @@ export default function CoreMechanics() {
 
         {/* Build Mechanics */}
         <motion.div variants={itemVariants}>
-          <span className="mono-tag mb-6 block w-fit">BUILD_TREE</span>
+          <span className="mono-tag mb-6 block w-fit">EXECUTION_TREE</span>
           <div className="space-y-4">
             {buildMechanics.map((m) => (
               <div

@@ -45,7 +45,7 @@ export default function BuildLog() {
       id="build-log"
       sectionNumber="05"
       title="Build Log"
-      subtitle="Projects shipped — problems solved, decisions made."
+      subtitle="Builds & Prototypes — problems solved, decisions made."
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (

@@ -5,21 +5,21 @@ import SectionWrapper, { itemVariants } from "../ui/SectionWrapper";
 
 const nodes = {
   design: [
-    { id: "d1", label: "Visual Design", x: 80, y: 60 },
-    { id: "d2", label: "UX Research", x: 80, y: 130 },
-    { id: "d3", label: "Game Design", x: 80, y: 200 },
-    { id: "d4", label: "Systems Thinking", x: 80, y: 270 },
+    { id: "d1", label: "Visual & UI/UX", x: 80, y: 60 },
+    { id: "d2", label: "Game Sense", x: 80, y: 130 },
+    { id: "d3", label: "Systems Thinking", x: 80, y: 200 },
+    { id: "d4", label: "Player Psychology", x: 80, y: 270 },
     { id: "d5", label: "Product Strategy", x: 80, y: 340 },
   ],
   build: [
-    { id: "b1", label: "HTML / CSS", x: 320, y: 60 },
-    { id: "b2", label: "React / Next.js", x: 320, y: 130 },
-    { id: "b3", label: "TypeScript", x: 320, y: 200 },
-    { id: "b4", label: "Three.js", x: 320, y: 270 },
-    { id: "b5", label: "Full Stack", x: 320, y: 340 },
+    { id: "b1", label: "Prototyping", x: 320, y: 60 },
+    { id: "b2", label: "AI Orchestration", x: 320, y: 130 },
+    { id: "b3", label: "Vibe Coding", x: 320, y: 200 },
+    { id: "b4", label: "Rapid Deployment", x: 320, y: 270 },
+    { id: "b5", label: "Execution & Delivery", x: 320, y: 340 },
   ],
   convergence: [
-    { id: "c1", label: "Design Engineer", x: 200, y: 410 },
+    { id: "c1", label: "Product & Game Designer", x: 200, y: 410 },
   ],
 };
 
@@ -66,7 +66,7 @@ export default function ProgressionTree() {
             className="fill-[var(--color-accent)]"
             style={{ fontSize: "10px", fontFamily: "var(--font-mono)", letterSpacing: "0.1em" }}
           >
-            DESIGN PATH
+            DESIGN & SYSTEMS
           </text>
           <text
             x="320"
@@ -75,7 +75,7 @@ export default function ProgressionTree() {
             className="fill-[var(--color-accent)]"
             style={{ fontSize: "10px", fontFamily: "var(--font-mono)", letterSpacing: "0.1em" }}
           >
-            BUILD PATH
+            EXECUTION & VIBE
           </text>
 
           {/* Design path connections */}
@@ -244,7 +244,7 @@ export default function ProgressionTree() {
                 letterSpacing: "0.05em",
               }}
             >
-              DESIGN ENGINEER
+              PRODUCT / GAME DESIGNER
             </text>
           </motion.g>
         </svg>
