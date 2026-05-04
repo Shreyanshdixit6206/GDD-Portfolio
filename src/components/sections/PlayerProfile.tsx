@@ -25,13 +25,13 @@ export default function PlayerProfile() {
         {/* Left — Bio (2/3) */}
         <motion.div variants={itemVariants} className="md:col-span-2 space-y-5">
           <p className="text-[var(--color-text)] leading-relaxed text-base md:text-lg">
-            I&apos;m Shreyansh. I design game systems that drive player behavior.
+            I&apos;m Shreyansh. I build game systems rooted in intentional design thinking and systemic decision-making.
           </p>
           <p className="text-[var(--color-text-secondary)] leading-relaxed">
-            My work focuses on the intersection of mechanics, progression, and retention. Whether balancing an FPS ranked economy or mapping open-world hostility rules, my priority is identifying friction points and tightening the core loop.
+            My work is driven by a simple question: <em className="text-[var(--color-text)] not-italic font-medium">Why does this mechanic exist, and what behavior does it incentivize?</em> Instead of just designing features, I focus on solving systemic problems—identifying friction points, balancing resource constraints, and mapping out the trade-offs of every design decision.
           </p>
           <p className="text-[var(--color-text-secondary)] leading-relaxed">
-            I build rulesets that scale. Every feature must serve a specific player motivation. If it doesn&apos;t feed the loop, I cut it.
+            Good design is about making hard choices. I specialize in breaking down complex variables into elegant, scalable rulesets. If a mechanic doesn&apos;t serve the core loop or the player&apos;s motivation, I cut it.
           </p>
 
           {/* Quick metadata */}
@@ -62,9 +62,10 @@ export default function PlayerProfile() {
                   src={portrait}
                   alt="Shreyansh Dixit — Game Designer & System Builder"
                   placeholder="blur"
-                  quality={85}
+                  quality={100}
+                  priority
                   fill
-                  sizes="(max-width: 768px) 100vw, 280px"
+                  sizes="(max-width: 768px) 100vw, 500px"
                   className="object-cover object-top"
                 />
               </div>
