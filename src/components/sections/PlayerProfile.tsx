@@ -25,13 +25,13 @@ export default function PlayerProfile() {
         {/* Left — Bio (2/3) */}
         <motion.div variants={itemVariants} className="md:col-span-2 space-y-5">
           <p className="text-[var(--color-text)] leading-relaxed text-base md:text-lg">
-            I&apos;m Shreyansh — a game designer who thinks in systems. My core strength lies in translating complex behaviors into engaging, sustainable core loops.
+            I&apos;m Shreyansh. I design game systems that drive player behavior.
           </p>
           <p className="text-[var(--color-text-secondary)] leading-relaxed">
-            My work sits at the intersection of game design mechanics and system architecture. I architect how systems feel, how they reward, and how they retain players. Whether analyzing competitive FPS ranking systems or designing onboarding protocols, my focus is always on player friction, cognitive load, and systemic feedback loops.
+            My work focuses on the intersection of mechanics, progression, and retention. Whether balancing an FPS ranked economy or mapping open-world hostility rules, my priority is identifying friction points and tightening the core loop.
           </p>
           <p className="text-[var(--color-text-secondary)] leading-relaxed">
-            I believe every feature is a mechanic, and every interaction must serve the player&apos;s core motivation without introducing unnecessary friction.
+            I build rulesets that scale. Every feature must serve a specific player motivation. If it doesn&apos;t feed the loop, I cut it.
           </p>
 
           {/* Quick metadata */}

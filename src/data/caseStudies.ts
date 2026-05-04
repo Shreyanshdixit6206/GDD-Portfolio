@@ -21,124 +21,109 @@ export const caseStudies: CaseStudy[] = [
     title: "Valorant Ranked System",
     subtitle: "Competitive Experience & Ranking System",
     context:
-      "Valorant is a competitive 5v5 tactical FPS where ranking and progression are core to long-term player engagement. The competitive system is designed to encourage skill improvement, maintain fair matchmaking, and retain players through rank progression.",
+      "In a 5v5 tactical FPS, competitive progression is the primary retention driver. The system must balance fair matchmaking with a sense of continuous upward mobility.",
     coreLoop:
-      "Play Match → Perform → Win/Lose → Rank Adjust → Queue Again\n\nThis loop is highly dependent on perceived fairness, feedback clarity, and player motivation.",
+      "Queue → Compete → Receive Rank Adjustment → Queue Again. If players feel the adjustment is arbitrary, the loop breaks.",
     problemIdentification: [
       {
-        title: "Lack of Transparent Feedback",
+        title: "Hidden MMR Friction",
         description:
-          "Rank changes feel inconsistent. Players don't understand why they gained or lost RR, and the hidden MMR system reduces trust.",
+          "Players lack visibility into rank math, assuming the system is rigged when RR gains don't match KDA.",
       },
       {
-        title: "Performance vs Outcome Conflict",
+        title: "Outcome Dominance",
         description:
-          "Individual performance is often overshadowed by team result. High-performing players still lose rank.",
+          "Individual mastery feels unrewarded if a teammate disconnects or throws, causing pure win/loss systems to feel deeply unfair.",
       },
       {
-        title: "Emotional Friction & Tilt",
+        title: "Tilt Spirals",
         description:
-          "Loss streaks feel overly punishing, with no systemic buffer to soften negative feedback loops.",
+          "Consecutive losses compound frustration, driving players to abandon the session entirely.",
       },
     ],
     playerImpact:
-      "These systemic issues result in reduced trust in the ranking system, player frustration and tilt, lower long-term retention for mid-tier players, and the perception of unfair matchmaking.",
+      "Trust in the system collapses. Mid-tier players experience high churn because the friction of losing outweighs the dopamine of winning.",
     designGoal:
-      "Improve transparency of the rank system, balance team outcome vs. individual performance, reduce emotional frustration loops, and maintain competitive integrity.",
+      "Expose enough math to justify outcomes without making the system exploitable. Reward individual performance while prioritizing team victory.",
     proposedSolution: [
       {
-        title: "Performance Feedback Layer",
+        title: "Performance Modifiers",
         description:
-          "Add a post-match breakdown: Combat Impact Score, Utility Effectiveness, and Objective Contribution. This shows WHY performance mattered.",
+          "Factor Utility Effectiveness and First Bloods into RR, shifting focus away from raw KDA padding.",
       },
       {
-        title: "Rank Adjustment Explanation",
+        title: "Soft Momentum Buffer",
         description:
-          "Instead of a raw '+18 RR', show the calculation: Win Bonus (+15), Performance Bonus (+5), Team Impact Modifier (-2).",
-      },
-      {
-        title: "Momentum System (Soft Buffer)",
-        description:
-          "Implement a slight RR loss reduction after consecutive losses to prevent frustration spirals.",
-      },
-      {
-        title: "Player Role Recognition",
-        description:
-          "Adjust evaluation metrics based on role (Duelist vs Controller) to prevent biased scoring towards high-fragging classes.",
+          "Silently reduce RR penalties after severe loss streaks to intercept tilt-induced churn.",
       },
     ],
     designDecisions: [
       {
-        decision: "Transparency vs Exploit Risk",
+        decision: "Opaque formulas over full transparency",
         rationale:
-          "More transparency improves trust, but too much detail can be gamed. The solution exposes simplified metrics, not raw formulas.",
+          "If players know exactly how RR is calculated, they will optimize for the formula instead of trying to win the round. Trade-off: Lower trust for higher match integrity.",
       },
       {
-        decision: "Performance Weighting",
+        decision: "Capping Individual Performance Bonuses",
         rationale:
-          "Too much weight causes selfish gameplay; too little causes frustration. A balanced hybrid model is required.",
-      },
-      {
-        decision: "Emotional Buffering",
-        rationale:
-          "Reduces frustration, but must not weaken competitiveness. Uses subtle adjustments rather than visible, exploitable rewards.",
+          "Individual performance can never offset a loss entirely, preventing players from baiting their team just to save their own rank.",
       },
     ],
     expectedOutcome:
-      "Increased player trust in the ranking system, reduced player friction after losses, improved engagement in mid-tier ranks, and better systemic understanding of performance improvement.",
+      "Players accept losses better when they see personal performance acknowledged. Retention during loss streaks improves.",
     tags: ["SYSTEM_DESIGN", "COMPETITIVE", "FPS"],
   },
   {
     id: "nfs-mw-escalation",
     caseNumber: "CASE_002",
-    title: "NFS Most Wanted (2005)",
+    title: "NFS Most Wanted",
     subtitle: "Systemic Escalation & Reward Structures",
     context:
-      "Need for Speed Most Wanted relies heavily on an integrated progression and police-pursuit system to drive player engagement through escalating tension.",
+      "Racing game progression often devolves into stat-grinding. NFS integrates narrative rivalry with systemic police escalation to mask the grind.",
     coreLoop:
-      "Race → Earn Bounty + Respect → Elevate Heat → Challenge Blacklist Racer → Win Car → Repeat at higher stakes.\n\nThe reward mechanism directly fuels the next cycle.",
+      "Race → Accumulate Bounty → Trigger Heat Escalation → Defeat Rival → Claim Pink Slip.",
     problemIdentification: [
       {
-        title: "Repetitive Late-Game Fatigue",
+        title: "Late-Game Fatigue",
         description:
-          "In many racing games, late-game progression devolves into grinding identical events with purely numerical difficulty increases.",
+          "Increasing AI speed artificially extends playtime but kills engagement. It feels cheap, not challenging.",
       },
       {
-        title: "Disconnected Progression Systems",
+        title: "Disconnected Progression",
         description:
-          "Often, narrative progression and mechanical progression are separate, causing mechanical actions to feel meaningless to the broader goal.",
+          "When narrative and mechanics run on parallel tracks, standard races feel like chores blocking the 'real' game.",
       },
     ],
     playerImpact:
-      "Without meaningful escalation, players burn out before completing the core loop. Numerical scaling (faster AI) causes frustration rather than genuine engagement.",
+      "Players abandon the game halfway because the core loop becomes a predictable mathematical grind instead of an escalating fantasy.",
     designGoal:
-      "Identify how systemic escalation and integrated narrative rewards bypass standard late-game fatigue.",
+      "Replace numerical difficulty scaling with emergent systemic pressure.",
     proposedSolution: [
       {
-        title: "Emergent Difficulty over Numerical Scaling",
+        title: "Systemic Escalation over Stat Buffs",
         description:
-          "Heat levels escalate mechanically. The game doesn't just make cops faster; it introduces new systemic variables: roadblocks, spike strips, helicopters, and federal units.",
+          "Instead of making cops faster, Heat levels introduce new variables: roadblocks, helicopters, and heavy units. The skill ceiling shifts dynamically.",
       },
       {
-        title: "Narrative as a Retention Mechanic",
+        title: "High-Stakes Gambles",
         description:
-          "The Blacklist integrates leaderboard mechanics with character progression. Beating a rival isn't procedural; it's personal. The reward (Pink Slips) creates extreme high-stakes tension.",
+          "The 'Pink Slip' reward turns a standard boss fight into a high-tension gamble, directly attacking player loss aversion.",
       },
     ],
     designDecisions: [
       {
-        decision: "High Stakes Reward System",
+        decision: "Pink Slip RNG",
         rationale:
-          "Offering the opponent's car via a 'Pink Slip' gamble introduces risk/reward mechanics that heighten emotional investment far more than a standard currency payout.",
+          "Players aren't guaranteed the boss car. The element of chance amplifies the emotional spike of the win. Trade-off: Can cause severe frustration if they pull a useless upgrade instead.",
       },
       {
-        decision: "Systemic Enemy Escalation",
+        decision: "Aggro Decay",
         rationale:
-          "Shifting the pursuit methodology (from chasing to trapping via spike strips) forces the player to constantly adapt their mental model, keeping the skill ceiling dynamic.",
+          "Forcing players to switch cars to lower Heat builds attachment to their entire garage, preventing the 'one-car-only' optimization problem.",
       },
     ],
     expectedOutcome:
-      "The player's skill ceiling rises organically because the systemic pressure of the world pushes back harder, resulting in long-term retention and extreme emotional satisfaction.",
+      "Players organically raise their own skill ceiling because the game world pushes back with new mechanics, not just bigger numbers.",
     tags: ["GAME_ANALYSIS", "ESCALATION", "CORE_LOOP"],
   },
   {
@@ -147,51 +132,51 @@ export const caseStudies: CaseStudy[] = [
     title: "Health Nexus",
     subtitle: "Reducing Cognitive Load in Search Systems",
     context:
-      "Health Nexus is a utility platform designed to map branded drugs to affordable generic equivalents. The system faced severe retention issues due to high friction during the initial user interaction.",
+      "Health Nexus maps branded drugs to generic equivalents. The system faced severe retention issues due to high input friction.",
     coreLoop:
-      "Formulate Need → Input Query → System Maps Generic → Present Savings → Action (Purchase/Log)\n\nThis loop breaks if the user fails to successfully input their query.",
+      "Input Query → System Maps Generic → Present Savings → Purchase. This loop shatters if the query fails.",
     problemIdentification: [
       {
-        title: "Assumption of Domain Literacy",
+        title: "Domain Literacy Assumption",
         description:
-          "The search interface required exact medical nomenclature. Users attempting to input common symptoms or vague brand names received null results.",
+          "The interface demanded exact nomenclature. A user typing 'Crocin for headaches' received a null state.",
       },
       {
-        title: "High Abandonment Rate",
+        title: "Friction Pre-Value",
         description:
-          "Initial analytics revealed a 68% drop-off within the first 30 seconds due to systemic failure to resolve imperfect user inputs.",
+          "Forcing account creation before displaying alternative pricing led to a 68% immediate drop-off.",
       },
     ],
     playerImpact:
-      "Users felt incompetent and frustrated. The friction point occurred before any value was demonstrated, leading to immediate session termination.",
+      "Users felt incompetent. The friction point occurred before the system demonstrated any value.",
     designGoal:
-      "Reduce the cognitive load required to execute the core loop and guarantee a successful 'first win' within 10 seconds of interaction.",
+      "Guarantee a successful 'first win' within 10 seconds of interaction, regardless of the user's medical literacy.",
     proposedSolution: [
       {
-        title: "Conversational Input Parsing",
+        title: "Fuzzy Conversational Parsing",
         description:
-          "Replaced rigid search parameters with a fuzzy, conversational parser. Users can input 'I take Crocin for headaches', and the system handles the systemic mapping.",
+          "The input field forgives spelling errors and accepts symptom-based queries, shifting the cognitive load to the backend.",
       },
       {
         title: "Progressive Value Disclosure",
         description:
-          "Delay complex account creation mechanics until AFTER the system demonstrates value (showing cost savings).",
+          "Let users run the core loop (seeing the savings) completely unauthenticated. Only gate the final purchase action.",
       },
     ],
     designDecisions: [
       {
-        decision: "Fuzzy Logic over Exact Match",
+        decision: "Fuzzy Logic vs Efficiency",
         rationale:
-          "Sacrificing backend processing efficiency to drastically reduce frontend user friction. The trade-off is computational overhead for massive UX gains.",
+          "Sacrificing backend performance to drastically reduce frontend friction. The trade-off is higher computational overhead to guarantee user success.",
       },
       {
-        decision: "Delayed Conversion Mechanics",
+        decision: "Delayed Conversion",
         rationale:
-          "By letting users 'play' the search mechanic before registering, we build investment. Once they see the savings, the friction of signing up is justified by the reward.",
+          "We forfeit immediate email capture to build investment. Once they see a $50 saving, the friction of signing up is suddenly justified by the reward.",
       },
     ],
     expectedOutcome:
-      "First-session conversion improved by 42%. By treating the interface as a low-barrier core loop, average time-to-first-success dropped from 47s to 18s.",
+      "Time-to-first-success dropped from 47s to 18s. By treating the search bar as a low-barrier mechanic, first-session conversion improved by 42%.",
     tags: ["UX_DESIGN", "FRICTION", "SYSTEM_THINKING"],
   },
 ];

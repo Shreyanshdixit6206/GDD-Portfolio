@@ -8,21 +8,21 @@ export default function OriginalSystemDesign() {
   const system = {
     title: "Dynamic Bounty & Reputation System",
     type: "Progression & Economy Mechanic",
-    context: "Designed for an open-world MMO where player actions organically shift the game economy and NPC hostility levels.",
+    context: "An open-world MMO mechanic where aggressive actions organically ripple into the game economy and faction hostility.",
     rules: [
-      "Actions generate 'Heat' (temporary hostility) and 'Reputation' (long-term standing).",
-      "Heat decays over time if undetected; Reputation is permanent until actively countered.",
-      "High Heat spawns AI Bounty Hunters; High Reputation unlocks black-market trading routes.",
+      "Aggressive actions map to two axes: 'Heat' (immediate, temporary hostility) and 'Reputation' (long-term standing).",
+      "Heat decays over time if players evade detection; Reputation locks until aggressively countered.",
+      "High Heat spawns AI pursuit; High Reputation alters NPC market pricing and unlocks smuggling routes.",
     ],
-    behaviorImpact: "Forces players to calculate the long-term economic cost of short-term aggressive actions. It organically separates players into 'outlaw' and 'citizen' factions without rigid class selection.",
+    behaviorImpact: "Players must balance the immediate thrill of combat against long-term economic taxation. It forces an organic split between 'outlaw' and 'citizen' playstyles without forcing a hard class selection.",
     tradeOffs: [
       {
-        decision: "Persistent Reputation vs. Forgiveness",
-        rationale: "Making Reputation permanent creates meaningful consequences, but risks frustrating players who want to change playstyles. Solution: Introduce a costly 'Identity Wipe' mechanic."
+        decision: "Permanent Reputation vs. Class Lock-in",
+        rationale: "Permanent consequences create weight, but punishing players for experimenting drives churn. Trade-off: Added a high-friction 'Identity Wipe' mechanic to allow resets without cheapening the system."
       },
       {
-        decision: "AI vs. Player Bounty Hunters",
-        rationale: "AI hunters ensure consistent systemic pressure, but Player hunters create better emergent narrative. Solution: AI handles low-tier Heat; Players are contracted for high-tier Heat."
+        decision: "AI vs. Player-Driven Bounties",
+        rationale: "Player hunters generate incredible emergent gameplay but are unreliable. AI is reliable but predictable. Trade-off: AI handles base Heat levels to guarantee pressure; Players are algorithmically contracted only for maximum Heat targets."
       }
     ]
   };

@@ -7,21 +7,21 @@ import SectionWrapper, { itemVariants } from "../ui/SectionWrapper";
 const philosophies = [
   {
     icon: Lightbulb,
-    title: "Systems Dictate Experience",
+    title: "Rules Over Aesthetics",
     description:
-      "Aesthetic is secondary to architecture. I design systemic rules and mechanics first. The UI exists strictly to facilitate those rules with minimal friction.",
+      "I map out rules and mechanics before considering the surface. If the underlying logic and economy don't balance, no amount of polish will save the loop.",
   },
   {
     icon: Layers,
-    title: "Systemic Depth, Surface Simplicity",
+    title: "Low Floor, High Ceiling",
     description:
-      "Core loops should be immediately intuitive but offer scaling complexity. Ruthlessly eliminate surface-level cognitive load to maximize systemic engagement.",
+      "Core loops must be instantly readable but structurally deep. I reduce upfront cognitive load so players can focus on mastering the systemic complexity.",
   },
   {
     icon: Users,
-    title: "Player Motivation as Core",
+    title: "Motivation Drives Mechanics",
     description:
-      "Design decisions must directly serve a specific player motivation. Features that do not drive the core feedback loop are immediately discarded.",
+      "Every feature must answer a specific player desire. If a mechanic doesn't feed directly back into the core feedback loop, it gets cut.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function DesignPhilosophy() {
         className="mt-14 border-l-2 border-[var(--color-accent)] pl-6 max-w-2xl"
       >
         <p className="font-serif text-xl md:text-2xl italic text-[var(--color-text)] leading-snug">
-          &ldquo;Game design is the invisible architecture of motivation. The player should feel the system, not see it.&rdquo;
+          &ldquo;Good systems are invisible. The player shouldn&apos;t see the math—they should just feel the consequences.&rdquo;
         </p>
         <cite className="mono-label block mt-3 not-italic">
           — Design Principle #0
