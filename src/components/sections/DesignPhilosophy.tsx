@@ -7,21 +7,21 @@ import SectionWrapper, { itemVariants } from "../ui/SectionWrapper";
 const philosophies = [
   {
     icon: Lightbulb,
-    title: "Systems Over Screens",
+    title: "Systems Dictate Experience",
     description:
-      "A beautiful screen is meaningless if the underlying system is broken. I design the rules of the game first — the UI is how players experience those rules.",
+      "Aesthetic is secondary to architecture. I design systemic rules and mechanics first. The UI exists strictly to facilitate those rules with minimal friction.",
   },
   {
     icon: Layers,
-    title: "Depth Through Simplicity",
+    title: "Systemic Depth, Surface Simplicity",
     description:
-      "The best game mechanics are learned in seconds and mastered over months. I apply the same principle to product design: reduce surface complexity, increase systemic depth.",
+      "Core loops should be immediately intuitive but offer scaling complexity. Ruthlessly eliminate surface-level cognitive load to maximize systemic engagement.",
   },
   {
     icon: Users,
-    title: "Player-Centric Always",
+    title: "Player Motivation as Core",
     description:
-      "Every design decision must answer: 'Does this serve the player?' If the answer isn't immediate and obvious, the feature doesn't ship. Empathy is a game mechanic.",
+      "Design decisions must directly serve a specific player motivation. Features that do not drive the core feedback loop are immediately discarded.",
   },
 ];
 
@@ -61,8 +61,7 @@ export default function DesignPhilosophy() {
         className="mt-14 border-l-2 border-[var(--color-accent)] pl-6 max-w-2xl"
       >
         <p className="font-serif text-xl md:text-2xl italic text-[var(--color-text)] leading-snug">
-          &ldquo;Good game design is invisible. The player just feels like
-          everything makes sense.&rdquo;
+          &ldquo;Game design is the invisible architecture of motivation. The player should feel the system, not see it.&rdquo;
         </p>
         <cite className="mono-label block mt-3 not-italic">
           — Design Principle #0

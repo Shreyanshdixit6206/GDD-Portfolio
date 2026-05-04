@@ -35,7 +35,7 @@ export default function ContactProtocol() {
   return (
     <SectionWrapper
       id="contact"
-      sectionNumber="10"
+      sectionNumber="05"
       title="Contact Protocol"
       subtitle="How to reach the designer."
     >

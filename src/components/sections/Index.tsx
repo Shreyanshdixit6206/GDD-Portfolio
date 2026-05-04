@@ -6,14 +6,9 @@ import SectionWrapper, { itemVariants } from "../ui/SectionWrapper";
 const tocItems = [
   { number: "01", title: "Player Profile", id: "player-profile" },
   { number: "02", title: "Design Philosophy", id: "design-philosophy" },
-  { number: "03", title: "Core Mechanics", id: "core-mechanics" },
-  { number: "04", title: "System Experience", id: "system-experience" },
-  { number: "05", title: "Build Log", id: "build-log" },
-  { number: "06", title: "Game Concepts", id: "game-concepts" },
-  { number: "07", title: "Case Studies", id: "case-studies" },
-  { number: "08", title: "Interface Design", id: "interface-design" },
-  { number: "09", title: "Progression Tree", id: "progression-tree" },
-  { number: "10", title: "Contact Protocol", id: "contact" },
+  { number: "03", title: "Case Studies", id: "case-studies" },
+  { number: "04", title: "Original System Design", id: "original-system-design" },
+  { number: "05", title: "Contact Protocol", id: "contact" },
 ];
 
 export default function Index() {

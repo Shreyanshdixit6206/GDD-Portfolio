@@ -16,9 +16,9 @@ export default function CaseStudies() {
   return (
     <SectionWrapper
       id="case-studies"
-      sectionNumber="07"
+      sectionNumber="04"
       title="Case Studies"
-      subtitle="Deep dives — how I think through design problems."
+      subtitle="Deep dives — systemic analysis of core loops and player friction."
     >
       <div className="space-y-4">
         {caseStudies.map((study) => (
@@ -68,39 +68,87 @@ export default function CaseStudies() {
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   className="overflow-hidden"
                 >
-                  <div className="px-6 pb-6 space-y-6 border-t border-[var(--color-border)]">
+                  <div className="px-6 pb-6 space-y-8 border-t border-[var(--color-border)]">
                     {/* Context */}
                     <div className="pt-6">
-                      <span className="mono-label block mb-2">CONTEXT</span>
-                      <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                      <span className="mono-label block mb-2 text-[var(--color-text-secondary)]">CONTEXT</span>
+                      <p className="text-sm text-[var(--color-text)] leading-relaxed">
                         {study.context}
                       </p>
                     </div>
 
-                    {/* Sections */}
-                    {study.sections.map((section, i) => (
-                      <div key={i}>
-                        <span className="mono-label text-[var(--color-accent)] block mb-2">
-                          {section.heading}
-                        </span>
-                        <p className="text-sm text-[var(--color-text)] leading-relaxed">
-                          {section.content}
-                        </p>
-                      </div>
-                    ))}
+                    {/* Core Loop */}
+                    <div className="border border-dashed border-[var(--color-accent)] p-5 bg-[var(--color-bg)]">
+                      <span className="mono-label text-[var(--color-accent)] block mb-2">CORE LOOP</span>
+                      <p className="text-sm text-[var(--color-text)] whitespace-pre-line leading-relaxed">
+                        {study.coreLoop}
+                      </p>
+                    </div>
 
-                    {/* Outcome */}
-                    <div className="bg-[var(--color-bg)] p-4 border border-[var(--color-border)]">
-                      <span className="mono-label text-[var(--color-accent)] block mb-2">
-                        OUTCOME
-                      </span>
+                    {/* Problem Identification */}
+                    <div>
+                      <span className="mono-label block mb-3 text-[var(--color-text-secondary)]">PROBLEM IDENTIFICATION</span>
+                      <div className="grid gap-4 md:grid-cols-2">
+                        {study.problemIdentification.map((prob, i) => (
+                          <div key={i} className="border-l-2 border-[var(--color-text-secondary)] pl-4">
+                            <h4 className="font-serif text-sm font-bold text-[var(--color-text)] mb-1">{prob.title}</h4>
+                            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{prob.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Player Impact & Design Goal */}
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <span className="mono-label block mb-2 text-[var(--color-text-secondary)]">PLAYER IMPACT</span>
+                        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{study.playerImpact}</p>
+                      </div>
+                      <div>
+                        <span className="mono-label block mb-2 text-[var(--color-text-secondary)]">DESIGN GOAL</span>
+                        <p className="text-sm text-[var(--color-text)] leading-relaxed">{study.designGoal}</p>
+                      </div>
+                    </div>
+
+                    {/* Proposed Solution */}
+                    <div>
+                      <span className="mono-label block mb-3 text-[var(--color-text-secondary)]">PROPOSED SOLUTION</span>
+                      <div className="space-y-4">
+                        {study.proposedSolution.map((sol, i) => (
+                          <div key={i} className="flex gap-4">
+                            <span className="text-[var(--color-accent)] font-mono text-sm mt-0.5">0{i + 1}</span>
+                            <div>
+                              <h4 className="font-serif text-sm font-bold text-[var(--color-text)] mb-1">{sol.title}</h4>
+                              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{sol.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Design Decisions */}
+                    <div>
+                      <span className="mono-label block mb-3 text-[var(--color-text-secondary)]">DESIGN DECISIONS & TRADE-OFFS</span>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {study.designDecisions.map((dec, i) => (
+                          <div key={i} className="border border-[var(--color-border)] p-4 bg-[var(--color-card)]">
+                            <h4 className="font-serif text-sm font-bold text-[var(--color-text)] mb-2">{dec.decision}</h4>
+                            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{dec.rationale}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Expected Outcome */}
+                    <div className="bg-[var(--color-bg)] p-5 border border-[var(--color-border)]">
+                      <span className="mono-label text-[var(--color-accent)] block mb-2">EXPECTED OUTCOME</span>
                       <p className="text-sm text-[var(--color-text)] leading-relaxed">
-                        {study.outcome}
+                        {study.expectedOutcome}
                       </p>
                     </div>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 pt-2 border-t border-[var(--color-border)]">
                       {study.tags.map((tag) => (
                         <span key={tag} className="mono-tag text-[10px]">
                           {tag}

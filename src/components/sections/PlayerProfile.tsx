@@ -25,31 +25,21 @@ export default function PlayerProfile() {
         {/* Left — Bio (2/3) */}
         <motion.div variants={itemVariants} className="md:col-span-2 space-y-5">
           <p className="text-[var(--color-text)] leading-relaxed text-base md:text-lg">
-            I&apos;m Shreyansh — a game designer who thinks in systems, builds in
-            code, and designs for humans. I see every product as a game: the
-            users are players, the features are mechanics, and the experience is
-            the core loop.
+            I&apos;m Shreyansh — a game designer who thinks in systems. My core strength lies in translating complex behaviors into engaging, sustainable core loops.
           </p>
           <p className="text-[var(--color-text-secondary)] leading-relaxed">
-            My work sits at the intersection of game design thinking and product
-            development. I don&apos;t just make things look good — I architect how
-            they feel, how they reward, and how they retain. From health-tech
-            platforms to idle game concepts, I apply the same lens: what is the
-            player&apos;s motivation, and how does every interaction serve it?
+            My work sits at the intersection of game design mechanics and system architecture. I architect how systems feel, how they reward, and how they retain players. Whether analyzing competitive FPS ranking systems or designing onboarding protocols, my focus is always on player friction, cognitive load, and systemic feedback loops.
           </p>
           <p className="text-[var(--color-text-secondary)] leading-relaxed">
-            Currently a final-year B.Tech student, actively seeking roles where I
-            can apply game design principles to real-world product problems.
-            I believe the best products are games people don&apos;t realize
-            they&apos;re playing.
+            I believe every feature is a mechanic, and every interaction must serve the player&apos;s core motivation without introducing unnecessary friction.
           </p>
 
           {/* Quick metadata */}
           <div className="pt-4 grid grid-cols-2 gap-4">
             {[
               { label: "LOCATION", value: "India" },
-              { label: "CLASS", value: "B.Tech (Final Year)" },
-              { label: "SPECIALIZATION", value: "Game & Product Design" },
+              { label: "DISCIPLINE", value: "Systems & UX Design" },
+              { label: "SPECIALIZATION", value: "Core Loops & Retention" },
               { label: "ACTIVE_SINCE", value: "2022" },
             ].map((item) => (
               <div key={item.label}>
