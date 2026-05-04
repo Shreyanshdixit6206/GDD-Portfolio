@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GitMerge, Brain, Layers, PlayCircle, Settings, Lightbulb } from "lucide-react";
+import { GitMerge, Brain, Layers, PlayCircle, Settings, Lightbulb, Target, AlertCircle, Crosshair } from "lucide-react";
 import SectionWrapper, { itemVariants } from "../ui/SectionWrapper";
 
 export default function SpawnPointCaseStudy() {
@@ -34,7 +34,7 @@ export default function SpawnPointCaseStudy() {
           <div className="mt-4">
             <span className="mono-label block">PROJECT_SCOPE</span>
             <span className="text-sm text-[var(--color-text)] mt-1 block">
-              Roguelike Simulation / Game Design Strategy
+              A system-driven game design simulation about fixing broken games under constraints
             </span>
           </div>
         </div>
@@ -48,170 +48,292 @@ export default function SpawnPointCaseStudy() {
               <Lightbulb size={16} className="text-[var(--color-accent)]" />
               <span className="mono-label text-[var(--color-accent)]">01. WHY THIS GAME EXISTS</span>
             </div>
-            <div className="space-y-3">
-              <p className="text-[var(--color-text)] text-sm md:text-base leading-relaxed">
-                <span className="font-semibold">Intent:</span> To simulate the tension of game development.
+            <div className="space-y-4 text-sm md:text-base leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="text-[var(--color-text)]">
+                Most players interact with game systems but rarely understand how they are built or why they fail. Spawn Point is designed to simulate the decision-making process behind game design, not just the outcome.
               </p>
-              <p className="text-[var(--color-text-secondary)] text-sm md:text-base leading-relaxed">
-                <span className="text-[var(--color-text)] font-semibold">Roguelike Structure:</span> Mirrors iterative design—failing, learning, and upgrading.
-              </p>
-              <p className="text-[var(--color-text-secondary)] text-sm md:text-base leading-relaxed">
-                <span className="text-[var(--color-text)] font-semibold">Player Behavior:</span> Tests strategic resource management. Players must balance ideal mechanics against harsh operational constraints.
-              </p>
+              <div>
+                <span className="text-[var(--color-text)] font-semibold block mb-1">I chose a roguelike structure to:</span>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Emphasize iteration and learning through repeated runs</li>
+                  <li>Allow players to improve their decision-making over time</li>
+                </ul>
+              </div>
+              <div>
+                <span className="text-[var(--color-text)] font-semibold block mb-1">I chose a simulation approach to:</span>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Make players think like designers instead of players</li>
+                  <li>Expose trade-offs between retention, engagement, and resource constraints</li>
+                </ul>
+              </div>
+              <div className="p-3 bg-[var(--color-bg)] border-l-2 border-[var(--color-accent)] text-[var(--color-text)]">
+                The goal is to create a system where players learn by making imperfect decisions under pressure.
+              </div>
             </div>
           </section>
 
-          {/* 2. CORE LOOP ANALYSIS */}
+          {/* 2. CORE LOOP */}
           <section>
             <div className="flex items-center gap-2 mb-4">
               <PlayCircle size={16} className="text-[var(--color-accent)]" />
-              <span className="mono-label text-[var(--color-accent)]">02. CORE LOOP ANALYSIS</span>
+              <span className="mono-label text-[var(--color-accent)]">02. CORE LOOP</span>
             </div>
             <div className="p-4 bg-[var(--color-bg)] border border-[var(--color-border)] mb-4">
               <p className="font-mono text-sm text-[var(--color-text)] text-center">
-                Move → Interact → Decide → Simulate → Feedback
+                Explore → Accept Problem → Make Decisions → Simulate Outcome → Evaluate → Upgrade → Repeat
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <p className="text-[var(--color-text)] text-sm mb-1 font-semibold">Pacing Control</p>
-                <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed">
-                  Separates physical downtime (movement) from high-cognitive load (decision-making). This prevents burnout.
-                </p>
-              </div>
-              <div>
-                <p className="text-[var(--color-text)] text-sm mb-1 font-semibold">Tension & Reward</p>
-                <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed">
-                  Tension spikes during resource constraints. Immediate reward hits when simulation math resolves.
-                </p>
+            <div className="space-y-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <span className="text-[var(--color-text)] font-semibold block mb-2">This loop works because:</span>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Decisions directly affect measurable outcomes</li>
+                <li>Feedback creates a learning loop</li>
+                <li>Failure is part of progression, not a dead end</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* 3. DESIGN INTENT */}
+          <section>
+            <div className="flex items-center gap-2 mb-4">
+              <Target size={16} className="text-[var(--color-accent)]" />
+              <span className="mono-label text-[var(--color-accent)]">03. DESIGN INTENT</span>
+            </div>
+            <div className="space-y-3 text-sm md:text-base leading-relaxed text-[var(--color-text-secondary)]">
+              <span className="text-[var(--color-text)] font-semibold block mb-1">The experience is designed to:</span>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Push players into meaningful decision-making</li>
+                <li>Force trade-offs between competing goals</li>
+                <li>Simulate real-world design constraints</li>
+              </ul>
+              <div className="p-3 bg-[var(--color-bg)] border-l-2 border-[var(--color-accent)] text-[var(--color-text)] mt-4">
+                The player is not solving puzzles — they are balancing systems under pressure.
               </div>
             </div>
           </section>
 
-          {/* 3. DESIGN DECISIONS FOR EVERY SYSTEM */}
+          {/* 4. CORE SYSTEMS & DESIGN DECISIONS */}
           <section>
             <div className="flex items-center gap-2 mb-4">
               <Layers size={16} className="text-[var(--color-accent)]" />
-              <span className="mono-label text-[var(--color-accent)]">03. DESIGN DECISIONS</span>
+              <span className="mono-label text-[var(--color-accent)]">04. CORE SYSTEMS & DESIGN DECISIONS</span>
             </div>
-            <p className="text-[var(--color-text-secondary)] text-sm mb-6">
-              To support the core loop, the simulation relies on four interconnected systems.
-            </p>
 
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {/* Decision System */}
-              <div className="border border-[var(--color-border)] p-4 bg-[var(--color-bg)]">
-                <span className="font-mono text-xs text-[var(--color-text-secondary)] block mb-2">A. DECISION SYSTEM (CARDS)</span>
-                <p className="text-sm text-[var(--color-text)] mb-3">
-                  Externalizes choices to make systemic trade-offs visible.
+              <div className="border border-[var(--color-border)] p-4 bg-[var(--color-bg)] flex flex-col h-full">
+                <span className="font-mono text-xs text-[var(--color-text-secondary)] block mb-2">A. DECISION SYSTEM (CARD-BASED)</span>
+                <p className="text-sm text-[var(--color-text)] mb-4">
+                  Players solve problems using decision cards with visible trade-offs.
                 </p>
-                <div className="pl-3 border-l-2 border-[var(--color-accent)] space-y-2">
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    <span className="text-[var(--color-text)] font-medium">Alternative Rejected:</span> Sliders or dialogue trees. They hide complexity and reduce tactical engagement.
-                  </p>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    <span className="text-[var(--color-text)] font-medium">Trade-off:</span> Introduces RNG. Forces adaptation over memorization.
-                  </p>
+                <div className="space-y-3 flex-grow">
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Why cards:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Makes choices explicit and tangible. Encourages strategic thinking.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Alternative considered:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Sliders or menu-based adjustments.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Why rejected:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Hides complexity. Reduces engagement with decision consequences.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Trade-off:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Cards simplify complexity but limit precision.</span>
+                  </div>
+                </div>
+                <div className="pt-3 mt-4 border-t border-[var(--color-border)]">
+                  <span className="text-[var(--color-text)] text-sm italic">The goal was to prioritize clarity of decision over control depth.</span>
                 </div>
               </div>
 
               {/* Resource System */}
-              <div className="border border-[var(--color-border)] p-4 bg-[var(--color-bg)]">
-                <span className="font-mono text-xs text-[var(--color-text-secondary)] block mb-2">B. RESOURCE SYSTEM (ENERGY/TIME)</span>
-                <p className="text-sm text-[var(--color-text)] mb-3">
-                  Creates immediate friction.
+              <div className="border border-[var(--color-border)] p-4 bg-[var(--color-bg)] flex flex-col h-full">
+                <span className="font-mono text-xs text-[var(--color-text-secondary)] block mb-2">B. RESOURCE SYSTEM (TIME & ENERGY)</span>
+                <p className="text-sm text-[var(--color-text)] mb-4">
+                  Players operate under limited time and energy per run.
                 </p>
-                <div className="pl-3 border-l-2 border-[var(--color-accent)] space-y-2">
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    <span className="text-[var(--color-text)] font-medium">Alternative Rejected:</span> Unrestricted actions. Without constraints, players optimize everything with zero tension.
-                  </p>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    <span className="text-[var(--color-text)] font-medium">Trade-off:</span> Punishes greed. Forces imperfect, "good enough" decisions.
-                  </p>
+                <div className="space-y-3 flex-grow">
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Why this system:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Introduces pressure. Prevents over-optimization.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Alternative considered:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Unlimited iteration.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Why rejected:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Removes tension. Turns gameplay into trial-and-error optimization.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Trade-off:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Can restrict experimentation.</span>
+                  </div>
+                </div>
+                <div className="pt-3 mt-4 border-t border-[var(--color-border)]">
+                  <span className="text-[var(--color-text)] text-sm italic">Constraint creates meaningful decisions instead of perfect ones.</span>
                 </div>
               </div>
 
               {/* Progression System */}
-              <div className="border border-[var(--color-border)] p-4 bg-[var(--color-bg)]">
+              <div className="border border-[var(--color-border)] p-4 bg-[var(--color-bg)] flex flex-col h-full">
                 <span className="font-mono text-xs text-[var(--color-text-secondary)] block mb-2">C. PROGRESSION SYSTEM</span>
-                <p className="text-sm text-[var(--color-text)] mb-3">
-                  Gates complexity by scaling titles (Junior to Lead).
+                <p className="text-sm text-[var(--color-text)] mb-4">
+                  Players evolve from junior designer to more advanced roles.
                 </p>
-                <div className="pl-3 border-l-2 border-[var(--color-accent)] space-y-2">
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    <span className="text-[var(--color-text)] font-medium">Alternative Rejected:</span> Flat difficulty scaling. Overwhelms new players with conflicting KPIs too early.
-                  </p>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    <span className="text-[var(--color-text)] font-medium">Trade-off:</span> Early runs feel restrictive to build necessary foundational knowledge.
-                  </p>
+                <div className="space-y-3 flex-grow">
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Why progression exists:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Provides long-term motivation. Reflects growth in complexity handling.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Alternative considered:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Static difficulty.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Why rejected:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Reduces engagement over time.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Trade-off:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Requires careful balancing to avoid overwhelm.</span>
+                  </div>
+                </div>
+                <div className="pt-3 mt-4 border-t border-[var(--color-border)]">
+                  <span className="text-[var(--color-text)] text-sm italic">Progression introduces increasing cognitive demand.</span>
                 </div>
               </div>
 
               {/* Economy System */}
-              <div className="border border-[var(--color-border)] p-4 bg-[var(--color-bg)]">
+              <div className="border border-[var(--color-border)] p-4 bg-[var(--color-bg)] flex flex-col h-full">
                 <span className="font-mono text-xs text-[var(--color-text-secondary)] block mb-2">D. ECONOMY SYSTEM</span>
-                <p className="text-sm text-[var(--color-text)] mb-3">
-                  Forces resource allocation between immediate survival (consumables) and permanent power (upgrades).
+                <p className="text-sm text-[var(--color-text)] mb-4">
+                  Players earn currency and invest in upgrades.
                 </p>
-                <div className="pl-3 border-l-2 border-[var(--color-accent)] space-y-2">
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    <span className="text-[var(--color-text)] font-medium">Alternative Rejected:</span> Purely linear progression. Removes the strategic choice of pacing.
-                  </p>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    <span className="text-[var(--color-text)] font-medium">Trade-off:</span> Slows early-game progression to reward late-game scaling.
-                  </p>
+                <div className="space-y-3 flex-grow">
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Why economy exists:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Adds meta-progression. Supports long-term engagement.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Alternative considered:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">No persistent progression.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Why rejected:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Reduces replay value.</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--color-text)] text-xs font-semibold block">Trade-off:</span>
+                    <span className="text-[var(--color-text-secondary)] text-sm">Risk of grind if poorly balanced.</span>
+                  </div>
+                </div>
+                <div className="pt-3 mt-4 border-t border-[var(--color-border)]">
+                  <span className="text-[var(--color-text)] text-sm italic">Economy reinforces player investment across runs.</span>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* 4. PLAYER EXPERIENCE LAYER */}
+          {/* 5. PLAYER EXPERIENCE JOURNEY */}
           <section>
             <div className="flex items-center gap-2 mb-4">
               <Brain size={16} className="text-[var(--color-accent)]" />
-              <span className="mono-label text-[var(--color-accent)]">04. PLAYER EXPERIENCE JOURNEY</span>
+              <span className="mono-label text-[var(--color-accent)]">05. PLAYER EXPERIENCE JOURNEY</span>
             </div>
-            <p className="text-[var(--color-text-secondary)] text-sm mb-4">
-              This systemic architecture guarantees a specific emotional arc:
-            </p>
-            <div className="space-y-4">
+            
+            <div className="space-y-6">
               <div className="flex gap-4 items-start">
-                <span className="mono-label text-[var(--color-text)] mt-0.5 w-16 shrink-0">START</span>
-                <p className="text-[var(--color-text-secondary)] text-sm"><span className="text-[var(--color-text)] font-medium">Exploration & Curiosity:</span> Players safely test mechanics and explore the environment without immediate pressure.</p>
+                <span className="mono-label text-[var(--color-text)] mt-0.5 w-24 shrink-0">EARLY GAME</span>
+                <div className="text-[var(--color-text-secondary)] text-sm space-y-1">
+                  <span className="text-[var(--color-text)] font-semibold block">Curiosity</span>
+                  <p>Exploring the office environment. Understanding systems. Low-pressure learning.</p>
+                  <p className="italic text-[var(--color-accent)] pt-1">Player feels: curious and exploratory</p>
+                </div>
               </div>
+              
               <div className="flex gap-4 items-start">
-                <span className="mono-label text-[var(--color-text)] mt-0.5 w-16 shrink-0">MID</span>
-                <p className="text-[var(--color-text-secondary)] text-sm"><span className="text-[var(--color-text)] font-medium">Pressure & Decision Tension:</span> Cognitive load spikes when balancing demanding KPIs against dwindling resources.</p>
+                <span className="mono-label text-[var(--color-text)] mt-0.5 w-24 shrink-0">MID GAME</span>
+                <div className="text-[var(--color-text-secondary)] text-sm space-y-1">
+                  <span className="text-[var(--color-text)] font-semibold block">Pressure</span>
+                  <p>Limited resources. Increasing system complexity. More impactful decisions.</p>
+                  <p className="italic text-[var(--color-accent)] pt-1">Player feels: tension and responsibility</p>
+                </div>
               </div>
+
               <div className="flex gap-4 items-start">
-                <span className="mono-label text-[var(--color-text)] mt-0.5 w-16 shrink-0">END</span>
-                <p className="text-[var(--color-text-secondary)] text-sm"><span className="text-[var(--color-text)] font-medium">Reward & Learning:</span> Deep satisfaction from stabilizing a simulation, or clear, actionable learning from failure.</p>
+                <span className="mono-label text-[var(--color-text)] mt-0.5 w-24 shrink-0">LATE GAME</span>
+                <div className="text-[var(--color-text-secondary)] text-sm space-y-1">
+                  <span className="text-[var(--color-text)] font-semibold block">Evaluation</span>
+                  <p>Results reflect decisions. Success or failure becomes visible. Learning loop activates.</p>
+                  <p className="italic text-[var(--color-accent)] pt-1">Player feels: reward or frustration, followed by improvement</p>
+                </div>
               </div>
+            </div>
+            
+            <div className="p-3 bg-[var(--color-bg)] border-l-2 border-[var(--color-accent)] text-[var(--color-text)] text-sm mt-6 text-center font-mono">
+              The experience is designed as:<br/>
+              Curiosity → Pressure → Reflection → Improvement
             </div>
           </section>
 
-          {/* 5. WHAT I WOULD IMPROVE */}
+          {/* 6. CONSTRAINTS & 7. WHAT MAKES THIS UNIQUE */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-[var(--color-border)] pt-8">
+            <section>
+              <div className="flex items-center gap-2 mb-4">
+                <AlertCircle size={16} className="text-[var(--color-accent)]" />
+                <span className="mono-label text-[var(--color-accent)]">06. CONSTRAINTS</span>
+              </div>
+              <ul className="list-disc pl-5 space-y-1 text-sm text-[var(--color-text-secondary)] mb-4">
+                <li>Limited time per task</li>
+                <li>Energy management</li>
+                <li>Increasing system complexity</li>
+              </ul>
+              <div className="text-sm text-[var(--color-text)] space-y-1">
+                <span className="font-semibold block mb-2">These constraints ensure:</span>
+                <p className="flex items-center gap-2"><span className="text-[var(--color-accent)]">▹</span> Players cannot optimize everything</p>
+                <p className="flex items-center gap-2"><span className="text-[var(--color-accent)]">▹</span> Every decision has a cost</p>
+              </div>
+            </section>
+            
+            <section>
+              <div className="flex items-center gap-2 mb-4">
+                <Crosshair size={16} className="text-[var(--color-accent)]" />
+                <span className="mono-label text-[var(--color-accent)]">07. WHAT MAKES THIS UNIQUE</span>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 text-sm text-[var(--color-text-secondary)]">
+                <li>A game about designing games</li>
+                <li>Focus on decision-making, not execution</li>
+                <li>Systems designed to expose trade-offs explicitly</li>
+              </ul>
+            </section>
+          </div>
+
+          {/* 8. WHAT I WOULD IMPROVE */}
           <section className="border-t border-[var(--color-border)] pt-8">
             <div className="flex items-center gap-2 mb-4">
               <Settings size={16} className="text-[var(--color-accent)]" />
-              <span className="mono-label text-[var(--color-accent)]">05. WHAT I WOULD IMPROVE</span>
+              <span className="mono-label text-[var(--color-accent)]">08. WHAT I WOULD IMPROVE</span>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="p-4 bg-[var(--color-bg)] border border-[var(--color-border)]">
-                <p className="text-[var(--color-text)] text-sm font-semibold mb-1">System Complexity Scaling</p>
-                <p className="text-[var(--color-text-secondary)] text-sm">Requires smoother onboarding to prevent cognitive overload when mid-tier mechanics unlock.</p>
+                <p className="text-[var(--color-text)] text-sm font-semibold mb-1">System scaling</p>
+                <p className="text-[var(--color-text-secondary)] text-sm">Complexity may increase too quickly — needs smoother progression</p>
               </div>
               <div className="p-4 bg-[var(--color-bg)] border border-[var(--color-border)]">
-                <p className="text-[var(--color-text)] text-sm font-semibold mb-1">Replayability Depth</p>
-                <p className="text-[var(--color-text-secondary)] text-sm">Integrating a deck-building layer would grant players agency over RNG, enhancing tactical depth.</p>
+                <p className="text-[var(--color-text)] text-sm font-semibold mb-1">Replay depth</p>
+                <p className="text-[var(--color-text-secondary)] text-sm">More variation in problem types can improve longevity</p>
               </div>
               <div className="p-4 bg-[var(--color-bg)] border border-[var(--color-border)]">
-                <p className="text-[var(--color-text)] text-sm font-semibold mb-1">UI Clarity / Readability</p>
-                <p className="text-[var(--color-text-secondary)] text-sm">Cascading systemic effects need more transparent visual feedback to aid player decision-making.</p>
+                <p className="text-[var(--color-text)] text-sm font-semibold mb-1">UI clarity</p>
+                <p className="text-[var(--color-text-secondary)] text-sm">High system density may overwhelm players without better information hierarchy</p>
               </div>
               <div className="p-4 bg-[var(--color-bg)] border border-[var(--color-border)]">
-                <p className="text-[var(--color-text)] text-sm font-semibold mb-1">Realism vs. Fun</p>
-                <p className="text-[var(--color-text-secondary)] text-sm">The penalty for failed runs needs streamlining to maintain tension without causing undue frustration.</p>
+                <p className="text-[var(--color-text)] text-sm font-semibold mb-1">Balance between realism and fun</p>
+                <p className="text-[var(--color-text-secondary)] text-sm">Too much realism could reduce engagement if not controlled</p>
               </div>
             </div>
           </section>
