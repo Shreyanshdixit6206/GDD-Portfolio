@@ -4,8 +4,8 @@ import TitleScreen from "@/components/sections/TitleScreen";
 import Index from "@/components/sections/Index";
 import PlayerProfile from "@/components/sections/PlayerProfile";
 import DesignPhilosophy from "@/components/sections/DesignPhilosophy";
+import SpawnPointCaseStudy from "@/components/sections/SpawnPointCaseStudy";
 import CaseStudies from "@/components/sections/CaseStudies";
-import OriginalSystemDesign from "@/components/sections/OriginalSystemDesign";
 import ContactProtocol from "@/components/sections/ContactProtocol";
 
 export default function Home() {
@@ -18,8 +18,8 @@ export default function Home() {
         <Index />
         <PlayerProfile />
         <DesignPhilosophy />
+        <SpawnPointCaseStudy />
         <CaseStudies />
-        <OriginalSystemDesign />
         <ContactProtocol />
       </main>
     </>

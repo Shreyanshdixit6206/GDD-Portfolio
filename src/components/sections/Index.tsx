@@ -6,8 +6,8 @@ import SectionWrapper, { itemVariants } from "../ui/SectionWrapper";
 const tocItems = [
   { number: "01", title: "Player Profile", id: "player-profile" },
   { number: "02", title: "Design Philosophy", id: "design-philosophy" },
-  { number: "03", title: "Case Studies", id: "case-studies" },
-  { number: "04", title: "Original System Design", id: "original-system-design" },
+  { number: "03", title: "Spawn Point", id: "spawn-point" },
+  { number: "04", title: "Secondary Case Studies", id: "case-studies" },
   { number: "05", title: "Contact Protocol", id: "contact" },
 ];
 

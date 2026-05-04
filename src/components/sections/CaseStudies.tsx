@@ -17,7 +17,7 @@ export default function CaseStudies() {
     <SectionWrapper
       id="case-studies"
       sectionNumber="04"
-      title="Case Studies"
+      title="Secondary Case Studies"
       subtitle="Deep dives — systemic analysis of core loops and player friction."
     >
       <div className="space-y-4">
