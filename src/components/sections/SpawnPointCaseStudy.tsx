@@ -74,24 +74,51 @@ export default function SpawnPointCaseStudy() {
 
           {/* GAMEPLAY PREVIEW VIDEO */}
           <section className="py-10 flex flex-col items-center border-t border-[var(--color-border)] mt-8">
-            <span className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text)] block mb-6 text-center">
+            <span className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text)] block mb-2 text-center">
               Simulation Preview
             </span>
+            <span className="font-mono text-xs text-[var(--color-text-secondary)] block text-center mb-8 tracking-widest uppercase">
+              Simulation Device
+            </span>
             
-            {/* System Monitor Frame */}
-            <div className="w-[95%] md:w-[65%] bg-[#080808] border border-[var(--color-border)] p-2 md:p-3 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
-              <div className="relative w-full aspect-video border border-[#222] bg-black">
-                <iframe 
-                  src="https://www.youtube.com/embed/cJMkWkdJ-Wo?rel=0&modestbranding=1" 
-                  title="Spawn Point Gameplay Preview"
-                  className="absolute top-0 left-0 w-full h-full"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                ></iframe>
+            {/* PSP-Style Console Frame */}
+            <div className="w-[95%] md:w-[75%] bg-[var(--color-bg)] border border-[var(--color-border)] rounded-[2rem] p-3 md:p-4 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between gap-3 md:gap-5">
+              
+              {/* Left Controls (D-pad) */}
+              <div className="hidden sm:flex w-12 md:w-16 shrink-0 items-center justify-center opacity-20">
+                <div className="relative w-10 h-10">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-[var(--color-text)] rounded-sm"></div>
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-[var(--color-text)] rounded-sm"></div>
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-[var(--color-text)] rounded-sm"></div>
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-[var(--color-text)] rounded-sm"></div>
+                </div>
+              </div>
+
+              {/* Center Screen */}
+              <div className="relative w-full flex-grow aspect-video bg-[#050505] rounded-lg p-1.5 md:p-2 border border-[var(--color-border)]">
+                <div className="relative w-full h-full bg-black overflow-hidden rounded-sm border border-[#222]">
+                  <iframe 
+                    src="https://www.youtube.com/embed/cJMkWkdJ-Wo?rel=0&modestbranding=1" 
+                    title="Spawn Point Gameplay Preview"
+                    className="absolute top-0 left-0 w-full h-full"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+
+              {/* Right Controls (Action Buttons) */}
+              <div className="hidden sm:flex w-12 md:w-16 shrink-0 items-center justify-center opacity-20">
+                <div className="relative w-10 h-10">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[var(--color-text)] rounded-full"></div>
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[var(--color-text)] rounded-full"></div>
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-[var(--color-text)] rounded-full"></div>
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-[var(--color-text)] rounded-full"></div>
+                </div>
               </div>
             </div>
             
-            <span className="text-[var(--color-text-secondary)] text-sm block mt-6 text-center max-w-[80%] md:max-w-[60%]">
+            <span className="text-[var(--color-text-secondary)] text-sm block mt-8 text-center max-w-[80%] md:max-w-[60%]">
               This is a conceptual visualization of the system design and player interaction flow.
             </span>
           </section>
