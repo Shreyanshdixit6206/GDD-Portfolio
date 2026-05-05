@@ -72,6 +72,25 @@ export default function SpawnPointCaseStudy() {
             </div>
           </section>
 
+          {/* GAMEPLAY PREVIEW VIDEO */}
+          <section className="py-2">
+            <span className="text-[var(--color-text)] font-semibold block mb-4">
+              System design translated into gameplay flow.
+            </span>
+            <div className="relative w-full aspect-video bg-[var(--color-bg)] border border-[var(--color-border)]">
+              <iframe 
+                src="https://www.youtube.com/embed/cJMkWkdJ-Wo?rel=0" 
+                title="Spawn Point Gameplay Preview"
+                className="absolute top-0 left-0 w-full h-full"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+            <span className="text-[var(--color-text-secondary)] text-sm block mt-3">
+              This is a conceptual gameplay preview created to visualize the system design and player interaction flow.
+            </span>
+          </section>
+
           {/* 2. CORE LOOP */}
           <section>
             <div className="flex items-center gap-2 mb-4">
@@ -336,6 +355,18 @@ export default function SpawnPointCaseStudy() {
                 <p className="text-[var(--color-text-secondary)] text-sm">Too much realism could reduce engagement if not controlled</p>
               </div>
             </div>
+          </section>
+
+          {/* 9. GDD DOCUMENT LINK */}
+          <section className="border-t border-[var(--color-border)] pt-8 mt-8">
+            <a 
+              href="https://docs.google.com/document/d/1KY7RBHkG0XH2XHrWOxWb_aswWbs3VlAL/edit?usp=sharing&ouid=115822916942556415387&rtpof=true&sd=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors inline-block"
+            >
+              Full design document available for detailed review →
+            </a>
           </section>
 
         </div>
