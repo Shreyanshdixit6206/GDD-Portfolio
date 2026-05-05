@@ -73,23 +73,29 @@ export default function SpawnPointCaseStudy() {
           </section>
 
           {/* GAMEPLAY PREVIEW VIDEO */}
-          <section className="py-2">
-            <span className="text-[var(--color-text)] font-semibold block mb-4">
-              System design translated into gameplay flow.
+          <section className="py-10 flex flex-col items-center border-t border-[var(--color-border)] mt-8">
+            <span className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text)] block mb-6 text-center">
+              Simulation Preview
             </span>
-            <div className="relative w-full aspect-video bg-[var(--color-bg)] border border-[var(--color-border)]">
-              <iframe 
-                src="https://www.youtube.com/embed/cJMkWkdJ-Wo?rel=0" 
-                title="Spawn Point Gameplay Preview"
-                className="absolute top-0 left-0 w-full h-full"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
+            
+            {/* System Monitor Frame */}
+            <div className="w-[95%] md:w-[65%] bg-[#080808] border border-[var(--color-border)] p-2 md:p-3 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+              <div className="relative w-full aspect-video border border-[#222] bg-black">
+                <iframe 
+                  src="https://www.youtube.com/embed/cJMkWkdJ-Wo?rel=0&modestbranding=1" 
+                  title="Spawn Point Gameplay Preview"
+                  className="absolute top-0 left-0 w-full h-full"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
-            <span className="text-[var(--color-text-secondary)] text-sm block mt-3">
-              This is a conceptual gameplay preview created to visualize the system design and player interaction flow.
+            
+            <span className="text-[var(--color-text-secondary)] text-sm block mt-6 text-center max-w-[80%] md:max-w-[60%]">
+              This is a conceptual visualization of the system design and player interaction flow.
             </span>
           </section>
+
 
           {/* 2. CORE LOOP */}
           <section>
